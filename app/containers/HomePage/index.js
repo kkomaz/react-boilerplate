@@ -12,7 +12,7 @@ import { createStructuredSelector } from 'reselect';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
 import ReposList from 'components/ReposList';
-import Button from 'components/Button';
+import RaisedButton from 'components/RaisedButton';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
@@ -50,8 +50,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             { name: 'description', content: 'A React.js Boilerplate application homepage' },
           ]}
         />
-        <Button handleRoute={() => console.log('hi')} label="This is my label" />
-        <Button> Hello World</Button>
+        <RaisedButton label="Hi" secondary />
+        <RaisedButton label="Hello World" primary />
+        <RaisedButton label="Hello World" />
         <div>
           <CenteredSection>
             <H2>

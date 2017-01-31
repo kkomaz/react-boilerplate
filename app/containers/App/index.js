@@ -12,6 +12,7 @@ import styled from 'styled-components';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import MuiApp from 'components/MuiApp';
 import withProgressBar from 'components/ProgressBar';
 
 const AppWrapper = styled.div`
@@ -25,18 +26,20 @@ const AppWrapper = styled.div`
 
 export function App(props) {
   return (
-    <AppWrapper>
-      <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
-        meta={[
-          { name: 'description', content: 'A React.js Boilerplate application' },
-        ]}
-      />
-      <Header />
-      {React.Children.toArray(props.children)}
-      <Footer />
-    </AppWrapper>
+    <MuiApp {...props}>
+      <AppWrapper>
+        <Helmet
+          titleTemplate="%s - React.js Boilerplate"
+          defaultTitle="React.js Boilerplate"
+          meta={[
+            { name: 'description', content: 'A React.js Boilerplate application' },
+          ]}
+        />
+        <Header />
+        {React.Children.toArray(props.children)}
+        <Footer />
+      </AppWrapper>
+    </MuiApp>
   );
 }
 
