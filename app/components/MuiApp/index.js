@@ -9,7 +9,7 @@ const colors = {
 };
 
 const UUmuiTheme = getMuiTheme({
-  fontFamily: 'Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
+  fontFamily: 'Raleway, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
   palette: {
     primary1Color: colors.primaryColor,
     accent1Color: colors.accentColor,
